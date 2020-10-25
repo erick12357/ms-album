@@ -7,9 +7,9 @@ import com.web.service.modelo.Album;
 public interface AlbumRest {
 
 	public ResponseEntity<?> registrarAlbum(Album nuevoAlbum);
-	public ResponseEntity<?> modificarAlbum(Integer idAlbum);
-	public ResponseEntity<?> borrarAlbum(Integer idAlbum);
-	public ResponseEntity<?> buscarAlbum(Integer idAlbum);
+	public ResponseEntity<?> modificarAlbum(Album idAlbum);
+	public ResponseEntity<?> borrarAlbum(String idAlbum);
+	public ResponseEntity<?> buscarAlbum(String idAlbum);
 	public ResponseEntity<?> obtenerTodos();
 	
 }

@@ -1,10 +1,14 @@
 package com.web.service.modelo;
 
 import java.time.LocalDate;
+import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@Document("album")
 public class Album {
 
-	private Integer idAlbum;
+	@JsonIgnoreProperties(ignoreUnknown = true)
+	private String id;
 	private String nombre;
 	private String artista;
 	private LocalDate fechaDeSalida;
@@ -13,12 +17,12 @@ public class Album {
 	public Album() {
 	}
 
-	public Integer getIdAlbum() {
-		return idAlbum;
+	public String getId() {
+		return id;
 	}
 
-	public void setIdAlbum(Integer idAlbum) {
-		this.idAlbum = idAlbum;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getNombre() {
